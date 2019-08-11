@@ -12,7 +12,7 @@ end
     def take_trip(listing) #DONE
         #passing in the name of a listing to take a trip
         new_trip = Trip.new(listing: listing, guest: self)
-        self.trips_taken += 1 #Will this cause problems later? 
+        self.trips_taken += 1 #Will this cause problems later? This seems to satisfy the tests.
         new_trip
     end
 
