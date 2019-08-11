@@ -10,6 +10,8 @@ ben = Guest.new("Ben")
 katie = Guest.new("Katie")
 
 listing_chi_town = Listing.new("Chicago")
+listing_dt_town = Listing.new("Detroit")
+listing_nyc = Listing.new("New York City")
 
 
 #test data

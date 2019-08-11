@@ -34,8 +34,14 @@ end
         self.all.select {|listing| listing.city == city}
     end
     
-    def self.most_popular ###EDIT EDIT
+    def self.most_popular #DONE
     #finds the listing that has had the most trips
-        self.all.reduce {|listing| listing.trips > 1}
+        mostpopularlisting = nil
+        checklisting = self.all.max_by {|listing| listing.trip_count }
+        
+        if checklisting.trip_count >= 1
+            mostpopularlisting = checklisting
+        end
+       mostpopularlisting
     end
 end
