@@ -1,6 +1,16 @@
 class Listing
+attr_reader :city, :name
+@@all = []
+
+
+def initialize(city)
+    @city = city
+   @@all << self
+end
+
     def guests
     #returns an array of all guests who have stayed at a listing
+        Trip.all.select 
     end
 
     def trips

@@ -1,4 +1,15 @@
 class Guest
+attr_reader :name
+@@all = []
+
+def initialize(name)
+    @name = name
+    @@all << self
+end
+
+    def take_trip(listing)
+        #passing in the name of a listing to take a trip
+    end
 
     def listings
     # returns an array of all listings a guest has stayed at

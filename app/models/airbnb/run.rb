@@ -1,8 +1,15 @@
 require "pry"
 
-require_relative "lib/guest.rb"
-require_relative "lib/listing.rb"
-require_relative "lib/trip.rb"
+require_relative "guest.rb"
+require_relative "listing.rb"
+require_relative "trip.rb"
+
+
+erin = Guest.new("Erin")
+ben = Guest.new("Ben")
+katie = Guest.new("Katie")
+
+listing_chi_town = Listing.new("Chicago")
 
 
 #test data
