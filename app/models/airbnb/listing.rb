@@ -5,31 +5,37 @@ attr_reader :city, :name
 
 def initialize(city)
     @city = city
-   @@all << self
+    @@all << self
 end
 
-    def guests
-    #returns an array of all guests who have stayed at a listing
-        Trip.all.select 
-    end
-
-    def trips
+    def trips #DONE
     #returns an array of all trips at a listing
+        Trip.all.select {|trip| trip.listing == self }
     end
 
-    def trip_count
+    def guests #DONE
+    #returns an array of all guests who have stayed at a listing
+        #Trip.all - add .name to  returns the name
+        trips.map {|trip| trip.guest }
+    end
+
+    def trip_count #DONE
     #returns the number of trips that have been taken to that listing
+        trips.length
     end
 
-    def self.all
-    #returns an array of all listings
+    def self.all #DONE
+        #returns an array of all listings
+        @@all
     end
     
-    def self.find_all_by_city(city)
+    def self.find_all_by_city(city) #DONE
     #takes an argument of a city name (as a string) and returns all the listings for that city
+        self.all.select {|listing| listing.city == city}
     end
     
     def self.most_popular
     #finds the listing that has had the most trips
+        self.all.reduce {|listing| listing.trips > 1}
     end
 end

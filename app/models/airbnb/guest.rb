@@ -9,6 +9,8 @@ end
 
     def take_trip(listing)
         #passing in the name of a listing to take a trip
+        new_trip = Trip.new(listing: listing, guest: self)
+        new_trip
     end
 
     def listings
@@ -24,7 +26,8 @@ end
     end
     
     def self.all
-    #returns an array of all guests
+        #returns an array of all guests
+        @@all
     end
     
     def self.pro_traveller
