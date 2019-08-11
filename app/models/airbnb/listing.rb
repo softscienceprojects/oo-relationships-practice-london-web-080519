@@ -34,7 +34,7 @@ end
         self.all.select {|listing| listing.city == city}
     end
     
-    def self.most_popular
+    def self.most_popular ###EDIT EDIT
     #finds the listing that has had the most trips
         self.all.reduce {|listing| listing.trips > 1}
     end
