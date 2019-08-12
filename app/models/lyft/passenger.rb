@@ -5,7 +5,7 @@ class Passenger
 
     def initialize(name)
         @name = name
-       # @distance_travelled = 0
+      #  @distance_travelled = 0
         @@all << self
     end
 
@@ -15,6 +15,7 @@ class Passenger
 
     def take_ride(distance, driver) #DONE
         Ride.new(distance, self, driver)
+      #  @distance_travelled += distance
     end
 
     def drivers #DONE
@@ -33,9 +34,9 @@ class Passenger
         arrayofdistances.reduce(:+)
     end
 
-    def self.premium members
+    def self.premium_members
         #members travelled over >100
-
+        self.all.select {|passenger| passenger.total_distance > 100 }
     end
 
 

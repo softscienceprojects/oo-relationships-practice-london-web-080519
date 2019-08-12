@@ -1,5 +1,6 @@
 class Driver
     attr_reader :name
+    attr_accessor :distance_driven
     @@all = []
 
     def initialize(name)
