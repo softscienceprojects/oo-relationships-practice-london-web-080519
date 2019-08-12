@@ -1,5 +1,6 @@
 class Trip
-attr_accessor :listing, :guest
+# attr_accessor :listing, :guest
+attr_reader :listing, :guest
 @@all = []
 
 def initialize(listing:, guest:)
@@ -8,15 +9,16 @@ def initialize(listing:, guest:)
     @@all << self
 end
 
-    def listing
-    #returns the listing object for the trip
-        @listing
-    end
+    #We don't need the below - the attribute reader above gives us this
+    # def listing
+    # #returns the listing object for the trip
+    #     @listing
+    # end
     
-    def guest
-    #returns the guest object for the trip
-        @guest
-    end
+    # def guest
+    # #returns the guest object for the trip
+    #     @guest
+    # end
 
     def self.all
         @@all

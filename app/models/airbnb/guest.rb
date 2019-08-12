@@ -5,14 +5,14 @@ attr_accessor :trips_taken
 
 def initialize(name)
     @name = name
-    @trips_taken = 0
+  #  @trips_taken = 0 #don't need this
     @@all << self
 end
 
     def take_trip(listing) #DONE
         #passing in the name of a listing to take a trip
         new_trip = Trip.new(listing: listing, guest: self)
-        self.trips_taken += 1 #Will this cause problems later? This seems to satisfy the tests.
+       # self.trips_taken += 1 #Will this cause problems later? This seems to satisfy the tests.
         new_trip
     end
 
@@ -39,7 +39,7 @@ end
     
     def self.pro_traveller  #DONE
     #returns an array of all guests who have made over 1 trip
-       self.all.select {|guest| guest.trips_taken > 1}
+       self.all.select {|guest| guest.trip_count > 1} #updated - already written another method that gives us this information. 
     end
     
     def self.find_all_by_name(name) #DONE
