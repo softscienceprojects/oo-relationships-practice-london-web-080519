@@ -1,5 +1,5 @@
 class Client
-    attr_reader :name
+    attr_reader :name, :trainer
     @@all = []
 
     def initialize(name)
@@ -11,10 +11,11 @@ class Client
         @@all
     end
 
-    def assign_trainer
+    def assign_trainer(trainer)
         # should take a trainer as argument and assign it to the client
+        trainer.clients << self
     end
-    
+
 
 
 end
