@@ -15,7 +15,7 @@ end
 
 def self.most_clients
     #should find which trainer has the most clients.
-    self.all.max_by{|trainer| trainer.clients }
+    self.all.max_by{|trainer| trainer.clients.count <=> trainer.clients.count }
 end
 
 end
