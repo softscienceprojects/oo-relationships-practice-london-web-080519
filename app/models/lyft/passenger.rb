@@ -37,6 +37,7 @@ class Passenger
     def self.premium_members
         #members travelled over >100
         self.all.select {|passenger| passenger.total_distance > 100 }
+        # REMEMBER TO CHAIN YOUR METHODS
     end
 
 
