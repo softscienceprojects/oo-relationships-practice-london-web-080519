@@ -3,6 +3,7 @@ require "pry"
 require_relative "client.rb"
 require_relative "location.rb"
 require_relative "trainer.rb"
+require_relative "session.rb"
 
 
 erin = Client.new("erin")
@@ -22,6 +23,12 @@ erin.assign_trainer(ben)
 erin2.assign_trainer(ben2)
 erin3.assign_trainer(ben2)
 
+# erin.new_session(soho) #1 client soho
+# erin.new_session(soho) #1 client soho
+# erin.new_session(finsbury) #1 client finsbury
+# erin2.new_session(finsbury) #2 clients finsbury
+# erin3.new_session(finsbury) #3 clients finsbury
+#nyc has no clients
 
 binding.pry
 puts "finished testing"

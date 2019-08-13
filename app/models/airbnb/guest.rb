@@ -1,6 +1,6 @@
 class Guest
 attr_reader :name
-attr_accessor :trips_taken
+# attr_accessor :trips_taken
 @@all = []
 
 def initialize(name)
